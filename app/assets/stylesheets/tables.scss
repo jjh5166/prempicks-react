@@ -1,0 +1,120 @@
+:root{
+--first_column_wd: 150px;
+--second_column_wd: 60px;
+--standings_col_padding: 218px;
+--table_bkgd_color: rgba(244, 244, 244, .5);
+}
+
+.table_container{
+  margin: 0 auto;
+  background:var(--table_bkgd_color);
+  overflow: scroll;
+  max-height: 82%;
+  outline: .5px solid grey;
+}
+.stdgs_table_container{
+  @extend .table_container;
+  width: 90%;
+}
+.epl_table_container{
+  @extend .table_container;
+  max-width:90%;
+  position: relative;
+}
+.table_top {
+  background-color: #717274;
+  color: #00ace6;
+  text-shadow: black 0 0 2px;
+}
+.standings_table{
+  margin-bottom: 0;
+  text-align: center;
+  th, td{
+    padding: .5rem;
+  }
+  th:first-child, td:first-child {
+    border-right: solid white 1px;
+    margin-right: -1px;
+    width: var(--first_column_wd);
+  };
+  th:first-child{
+    height: auto;
+    background-color: var(--nav_bkgd_clr);
+    color: var(--nav_bkgd_clr);
+    text-shadow: none;
+    position: sticky;
+  };
+  td:first-child{
+    white-space: nowrap;
+    overflow: scroll;
+    position: sticky;
+  };
+  th:nth-child(-n + 2), td:nth-child(-n + 2) {
+    position: -webkit-sticky; //Safari
+    position: sticky;
+    outline: solid white 1px;
+    left:0;
+    z-index: 100;
+  };
+  th:nth-child(-n + 2){
+    background-color: var(--nav_bkgd_clr);
+  };
+  td:nth-child(-n + 2){
+    background-color: #EDEAEA;
+  };
+  th:nth-child(2), td:nth-child(2) {
+    width: var(--second_column_wd);
+    white-space: nowrap;
+    overflow: scroll;
+  };
+}
+.td_spacer, .th_spacer{
+  display: none
+}
+.td_spacer{
+  width:100%;
+  background-color: rgba(165, 165, 165, 0.8);
+}
+#standings_second{
+  display: none;
+}
+@media only screen and (min-height: 640px) {
+  .table_container{
+    max-height: 86%
+  }
+}
+@media only screen and (min-height: 668px) {
+  .table_container{
+    max-height: 88%
+  }
+}
+@media only screen and (min-width: 813px) {
+  /* For desktop: */
+  .table_container{
+      max-height: 84%
+    }
+}
+@media only screen
+and (min-width: 640px)
+and (max-width: 812px)
+and (orientation: landscape) {
+    /* For landscape mobile: */
+    .table_container{
+      margin-top: 0%;
+    }
+}
+@media only screen and (min-width: 640px) {
+  /* Larger than mobile portrait */
+      .td_spacer, .th_spacer{
+    display: table-cell;
+    }
+}
+.pt_cell_w{
+  background-color: rgba(9, 185, 39, 0.8);
+}
+.pt_cell_l{
+  background-color: rgba(194, 62, 36, .8);
+}
+.pt_cell_d{
+  background-color: rgba(223, 219, 30, 0.8);
+}

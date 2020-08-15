@@ -1,0 +1,41 @@
+<table class="table table-hover table-bordered standings_table" id="standings_full">
+  <thead>
+    <tr class="table_top">
+      <th class="firstColumn">
+        <span>Team</span> /
+        <span>Owner</span>
+      </th>
+      <th class="secondColumn">Points</th>
+      <% (-@current_matchday..-1).each do |n|%>
+      <th class="th_match" colspan="2">
+        <%= -n %>
+      </th>
+      <%end%>
+    </tr>
+  </thead>
+  <tbody>
+    <% @seasontotals.each do |u|%>
+    <tr>
+      <td class="team_cell" title="<%=u.fname%> <%=u.lname%>">
+        <%= u.team_name%>
+      </td>
+      <td class="secondColumn">
+        <%= u.season %>
+      </td>
+      <% @upicks[u.id].first(@current_matchday).reverse.each do |t|%>
+        <% unless @unlocked_mds.include? t.matchday%>
+      <td>
+          <%= t.team_id %>
+      </td>
+      <td class="pt_cell">
+          <%= t.points%>
+      </td>
+        <%else%>
+            <td></td>
+            <td></td>
+        <%end%>
+      <%end%>
+    </tr>
+    <%end%>
+  </tbody>
+</table>

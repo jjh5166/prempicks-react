@@ -1,0 +1,91 @@
+.dev_cnt{
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(31,89,47,1) 0%, rgb(41, 161, 111) 35%, rgb(8, 78, 31) 100%);
+  padding-bottom: 10px;
+  border: 2px groove grey;
+  margin-top: 32%;
+  color: rgba(231, 241, 241, 1);
+  text-shadow: 1px 1px #00394d;
+  overflow-y: scroll;
+  form{
+    .field{
+      input{
+        width: 85%;
+      }
+    }
+  }
+}
+.btn-std{
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  color: white;
+  width: fit-content;
+}
+.login-btn{
+  @extend .btn-std;
+  color: rgba(231, 241, 241, 1);
+  background-color: #0f8bb8;
+}
+.guest_btn{
+  @extend .btn-std;
+  background-color:#5BBF78;
+}
+.signup_btn{
+  @extend .btn-std;
+  background-color:rgb(137, 67, 184);
+}
+.btn-break{
+  display: block;
+  height: 2px;
+}
+.pword_link{
+  color: #76cfec;
+  text-decoration: underline
+}
+.edit_form{
+  @extend .dev_cnt;
+  margin-top: 0;
+  width: 80%;
+  max-height: 90%;
+  h2{
+    font-size: 1.5rem;
+  }
+}
+@media only screen
+and (min-width: 640px)
+and (max-width: 812px)
+and (orientation: landscape) {
+  .edit_form{
+    margin-top:-10%;
+  }
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+  .dev_cnt{
+    width: 23%;
+    margin-top: 10%;
+    form{
+      .field{
+        input{
+          width: auto;
+        }
+      }
+    }
+  }
+  .edit_form{
+    margin-top: 2%;
+    width: 36%;
+    h2{
+      font-size: 2rem;
+    }
+  }
+}
+
+.tip_asterisk{
+  font-size: .8em;
+}
