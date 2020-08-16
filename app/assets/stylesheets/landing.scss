@@ -20,7 +20,7 @@
   justify-content: center;
 }
 .landing-btn{
-  @extend .btn-std;
+  @extend .btn-std !optional;
   border: solid white 1px;
   margin: 5% !important;
   font-size: 2em

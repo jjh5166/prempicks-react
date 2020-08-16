@@ -40,11 +40,11 @@
         transition: .3s ease-out all;
     }
     .active_3_btn{
-        @extend .active_base;
+        @extend .active_base !optional;
         width: 32%;
     }
     .active_2_btn{
-        @extend .active_base;
+        @extend .active_base !optional;
         width: 50%;
 
     }
@@ -72,7 +72,7 @@
     }
 }
 .switch_3_btn_inactive{
-    @extend .switch_3_btn;
+    @extend .switch_3_btn !optional;
 }
 .switch_2_btn{
     button{
