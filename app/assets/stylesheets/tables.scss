@@ -13,11 +13,11 @@
   outline: .5px solid grey;
 }
 .stdgs_table_container{
-  @extend .table_container;
+  @extend .table_container !optional;
   width: 90%;
 }
 .epl_table_container{
-  @extend .table_container;
+  @extend .table_container !optional;
   max-width:90%;
   position: relative;
 }

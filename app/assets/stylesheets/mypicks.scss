@@ -108,11 +108,11 @@
     font-size: 16px;
   }
   .hteam{
-    @extend .tspan;
+    @extend .tspan !optional;
     grid-column-start: 1;
   }
   .ateam{
-    @extend .tspan;
+    @extend .tspan !optional;
     grid-column-start: 5;
   }
   .himage{

@@ -1,5 +1,5 @@
 .schedule_content{
-  @extend .content_container;
+  @extend .content_container !optional;
   padding: 0 3% 5% 3%;
   margin-top:0;
   max-height: 83% !important;

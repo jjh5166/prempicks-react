@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   authenticated :user do
     root to: 'picks#mypicks', as: :authenticated_root
   end
-  root to: 'landing#landing_page'
+  root to: 'landing#index'
+  get '/*path' => 'landing#index'
 
   get '/rules' => 'static_pages#rules', as: :rules
   get '/table' => 'epldata#table', as: :epl_table
