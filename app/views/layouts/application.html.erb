@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Prempicks</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <script src="https://use.fontawesome.com/6b64edde02.js"></script>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Kanit:400,900i" rel="stylesheet">
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body  class="hero_img">
-  <% unless controller_name == "landing" %>
-    <%= render 'layouts/navbar'%>
-  <% end %>
-    <div class="page_container">
-      <%= yield %>
-    <% unless controller_name == "landing" %>
-      <%= render 'layouts/footer'%>
-    <% end %>
-    </div>
-  </body>
+
+<head>
+  <title>Prempicks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <script src="https://use.fontawesome.com/6b64edde02.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Kanit:400,900i" rel="stylesheet">
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'Index' %>
+</head>
+
+<body>
+  <%= yield %>
+</body>
+
 </html>
