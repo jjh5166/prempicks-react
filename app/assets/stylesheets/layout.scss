@@ -2,22 +2,21 @@
   -ms-overflow-style: none;
   scrollbar-width: none; //FF
 }
-html{
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-}
-body{
-  height: 100%;
+html,
+body,
+#root {
+	width: 100%;
+	height: 100%;
+	height: -webkit-fill-available;
+  scroll-behavior: smooth;
   font-family: 'Kanit', sans-serif;
-  position: relative;
-  overflow: hidden;
 }
 h2 {
   font-style: oblique;
   text-align: center;
 }
 .page_container{
-  max-height: 100%;
+  height: 100%;
   width: 100%;
   padding-top:1%;
 }

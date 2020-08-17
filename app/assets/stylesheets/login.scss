@@ -19,13 +19,6 @@
     }
   }
 }
-.btn-std{
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  color: white;
-  width: fit-content;
-}
 .login-btn{
   @extend .btn-std !optional;
   color: rgba(231, 241, 241, 1);
