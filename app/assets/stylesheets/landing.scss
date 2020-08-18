@@ -19,12 +19,6 @@
   display: flex;
   justify-content: center;
 }
-.landing-btn{
-  @extend .btn-std;
-  border: solid white 1px !important;
-  margin: 5% !important;
-  font-size: 2em !important;
-}
 @media only screen and (min-width: 640px) {
     /* For landscape mobile: */
   .home_header{
