@@ -20,8 +20,6 @@ gem 'football__data'
 gem 'jbuilder'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'simple_form'
-gem 'bootstrap', '>= 4.3.1'
 gem 'aws-sdk-s3', require: false
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
