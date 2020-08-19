@@ -11,21 +11,8 @@
  * It is generally better to create a new file per style scope.
  *
  */
- // import the CSS framework
- @import "bootstrap";
- @import "buttons";
- @import "roots";
- @import "epltable";
- @import "landing";
- @import "login";
- @import "matchday";
- @import "mypicks";
- @import "navbar";
  @import "normalize";
- @import "rules";
- @import "schedule";
- @import "tables";
- @import "static_pages";
+ @import "buttons";
+ @import "forms";
+ @import "landing";
  @import "layout";
- @import "switch_buttons";
- @import "error_messages"
