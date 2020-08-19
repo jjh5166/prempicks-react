@@ -14,6 +14,7 @@ const TxtField = ({ placeholder, isPassword = false, ...props }) => {
       error={!!errorText}
       placeholder={placeholder}
       type={password}
+      FormHelperTextProps={{ classes: "form_helper_text" }}
     />
   );
 };
