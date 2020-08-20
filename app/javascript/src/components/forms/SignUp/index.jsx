@@ -4,10 +4,16 @@ import { Button } from '@material-ui/core';
 
 import { validationSchema } from './validate';
 import TxtField from '../elements/TxtField';
+import Layout from "../../Layout";
+import { FormContainer } from '../styled';
 
+const buttonStyle = {
+  color: '#fff',
+  backgroundColor: '#8943b8'
+};
 export default () => (
-  <div className="page_container hero_img">
-    <div className="user_form">
+  <Layout>
+    <FormContainer>
       <h2>Sign Up</h2>
       <Formik
         initialValues=
@@ -34,10 +40,10 @@ export default () => (
             <TxtField name="email" placeholder="Email" /><br />
             <TxtField name="password" placeholder="Password" isPassword={true} /><br />
             <TxtField name="confirmPassword" placeholder="Password" isPassword={true} /><br />
-            <Button type="submit" disabled={isSubmitting}>Sign Up</Button>
+            <Button type="submit" disabled={isSubmitting} style={buttonStyle}>Sign Up</Button>
           </form>
         )}
       </Formik>
-    </div>
-  </div>
+    </FormContainer>
+  </Layout>
 );

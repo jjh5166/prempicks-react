@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Landing from "../components/Landing";
+import Landing from "../pages/Landing";
 import Login from '../components/forms/Login';
 import SignUp from '../components/forms/SignUp';
 
