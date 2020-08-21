@@ -1,4 +1,6 @@
-.user_form{
+import styled from 'styled-components';
+
+export const FormContainer = styled.div`
   position: relative;
   margin: 0 auto;
   width: 50%;
@@ -10,14 +12,4 @@
   color: rgba(231, 241, 241, 1);
   text-shadow: 1px 1px #00394d;
   overflow-y: scroll;
-  form{
-    input{
-      width: 85%;
-      &:-webkit-autofill, &:-webkit-autofill:focus {
-        box-shadow: 0 0 0 50px blue inset; ;
-        -webkit-box-shadow: 0 0 0 50px blue inset; /* Change the color to your own background color */
-        -webkit-text-fill-color: orange;
-      }
-    }
-  }
-}
+`
