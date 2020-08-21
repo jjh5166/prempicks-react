@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const FormContainer = styled.div`
   position: relative;
-  margin: 0 auto;
   width: 50%;
   text-align: center;
   border-radius: 10px;
@@ -12,6 +11,7 @@ export const FormContainer = styled.div`
   color: rgba(231, 241, 241, 1);
   text-shadow: 1px 1px #00394d;
   overflow-y: scroll;
+  margin-bottom: 10%;
   h2{
     font-style: oblique
   }
