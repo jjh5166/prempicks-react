@@ -1,11 +1,13 @@
 import React from "react";
 
 import NavBar from '../NavBar';
-import { PageContainer } from './styled';
+import { PageContainer, ContentContainer } from './styled';
 
 export default ({ children, hideNav = false }) => (
   <PageContainer>
     {!hideNav && <NavBar />}
-    {children}
+    <ContentContainer>
+      {children}
+    </ContentContainer>
   </PageContainer>
 );
