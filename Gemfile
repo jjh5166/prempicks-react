@@ -11,6 +11,7 @@ gem 'pg'
 gem 'webpacker', '~> 5.x'
 # Use Puma as the app server
 gem 'puma'
+gem 'rack-cors'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 6.0'
 gem 'devise'

@@ -2,7 +2,6 @@
 
 class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
-  before_action :user_authenticated, only: [:new]
   respond_to :json
 
   private
@@ -12,7 +11,7 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   def respond_to_on_destroy
-    head :no_content
+    head :ok
   end
   # from stack for login page
   # def user_authenticated
