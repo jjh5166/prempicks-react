@@ -16,6 +16,7 @@ export const PageContainer = styled.div`
   background-blend-mode: multiply;
 `;
 export const ContentContainer = styled.div`
+  position: relative;
   flex: 1;
   display: flex;
   justify-content: center;
