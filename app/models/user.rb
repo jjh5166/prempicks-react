@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable
+         :recoverable, :rememberable, :trackable,
+         :jwt_authenticatable, jwt_revocation_strategy: JwtDenylist
   has_many :picks, dependent: :destroy, inverse_of: :user
   has_many :guest_picks, dependent: :destroy, inverse_of: :user
   accepts_nested_attributes_for :picks, :guest_picks

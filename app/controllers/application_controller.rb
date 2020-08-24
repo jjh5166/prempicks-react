@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  include AuthorizationHelper
+  respond_to :json
   protect_from_forgery with: :null_session
   
   def render_resource(resource)

@@ -11,6 +11,7 @@ gem 'pg'
 gem 'webpacker', '~> 5.x'
 # Use Puma as the app server
 gem 'puma'
+gem 'rack-cors'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 6.0'
 gem 'devise'
@@ -27,6 +28,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'strip_attributes'
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
+gem 'dotenv-rails'
 
 group :production do
   gem 'scout_apm'
@@ -50,7 +52,6 @@ end
 
 group :test do
   gem 'rspec-sidekiq'
-  gem 'dotenv-rails'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
