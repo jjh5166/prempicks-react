@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import { StyledNavBar, StyledBrand } from './styled';
-
+import logout from '../../logout';
 export default () => {
   return (
     <StyledNavBar expand="md" className="justify-content-between navbar-dark">
@@ -22,7 +22,7 @@ export default () => {
           <Nav className="ml-auto">
             <Nav.Link href="/rules">Rules</Nav.Link>
             <Nav.Link href="/account">Account</Nav.Link>
-            <Nav.Link href="/logout">Logout</Nav.Link>
+            <Nav.Link onClick={async () => { await logout(); }}>Logout</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module Eplpicks
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
+    config.load_defaults 6.1
     config.generators.javascript_engine :js
     config.active_job.queue_adapter = :sidekiq
 
@@ -19,7 +19,7 @@ module Eplpicks
         resource(
           '*',
           headers: :any,
-          expose: ["Authorization"],
+          expose: ["authorization"],
           methods: [:get, :patch, :put, :delete, :post, :options, :show]
         )
       end

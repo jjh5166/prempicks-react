@@ -12,7 +12,7 @@ const ErrorDisplay = ({ errors }) => {
           <strong className="mr-auto">Whoops!</strong>
         </Toast.Header>
         <Toast.Body>
-          {Object.values(errors).map((err, i) => {
+          {errors.map((err, i) => {
             return (
               <div key={"err" + i}>{err}</div>
             );
