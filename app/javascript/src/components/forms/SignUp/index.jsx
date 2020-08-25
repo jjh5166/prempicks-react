@@ -47,7 +47,7 @@ export default () => {
                 }
               }).catch(err => {
                 console.log("error.res", err.response);
-                setErrors(err.response.data.errors);
+                setErrors(Object.values(err.response.data.errors));
               });
             setSubmitting(false);
           }}
