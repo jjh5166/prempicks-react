@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import { Formik, Form } from 'formik';
 import { Button } from '@material-ui/core';
 import axios from 'axios';
 
+import nav from '../../../routes/nav';
 import { setAccessToken } from "../../../accessToken";
 import { validationSchema } from './validate';
 import TxtField from '../elements/TxtField';
@@ -18,7 +18,6 @@ const buttonStyle = {
 
 export default () => {
   const [errors, setErrors] = useState(null);
-  let history = useHistory();
   return (
     <Layout>
       <ToastsContainer>
@@ -39,9 +38,8 @@ export default () => {
             axios.post(`/users/login`, { user: data })
               .then(res => {
                 if (res.status == 200) {
-                  console.log(res);
                   setAccessToken(res.headers.authorization);
-                  history.push("/mypicks");
+                  nav("/mypicks");
                 }
               }).catch(err => {
                 setErrors([err.response.data]);
