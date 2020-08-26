@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import { setAccessToken, getAccessToken } from './accessToken';
+import nav from './routes/nav';
 
 const logout = () => {
   const auth = getAccessToken();
@@ -12,6 +13,7 @@ const logout = () => {
     })
     .catch(err => console.log(err));
   setAccessToken("");
+  nav('/');
 };
 
 export default logout;
