@@ -3,6 +3,7 @@ import { Formik, Form } from 'formik';
 import { Button } from '@material-ui/core';
 import axios from 'axios';
 
+import { setAccessToken } from '../../../accessToken';
 import nav from '../../../routes/nav';
 import { validationSchema } from './validate';
 import TxtField from '../elements/TxtField';
@@ -42,10 +43,10 @@ export default () => {
               .then(res => {
                 console.log(res);
                 if (res.status == 201) {
+                  setAccessToken(res.headers.authorization);
                   nav("/mypicks");
                 }
               }).catch(err => {
-                console.log("error.res", err.response);
                 setErrors(Object.values(err.response.data.errors));
               });
             setSubmitting(false);

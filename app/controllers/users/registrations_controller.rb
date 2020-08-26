@@ -7,6 +7,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     build_resource(sign_up_params)
 
     resource.save
+    sign_up(resource_name, resource)
     render_resource(resource)
   end
   
