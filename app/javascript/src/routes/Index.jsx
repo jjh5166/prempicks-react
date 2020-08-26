@@ -1,12 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
+
+import history from "./history";
 import Landing from "../pages/Landing";
 import Login from '../components/forms/Login';
 import SignUp from '../components/forms/SignUp';
 import MyPicks from '../pages/MyPicks';
 
 export default (
-  <Router>
+  <Router history={history}>
     <Switch>
       <Route path="/" exact component={Landing} />
       <Route path="/login" exact component={Login} />

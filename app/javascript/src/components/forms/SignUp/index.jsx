@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import { Formik, Form } from 'formik';
 import { Button } from '@material-ui/core';
 import axios from 'axios';
 
+import nav from '../../../routes/nav';
 import { validationSchema } from './validate';
 import TxtField from '../elements/TxtField';
 import { ToastsContainer, ErrorDisplay } from '../elements/Toasts';
@@ -17,7 +17,6 @@ const buttonStyle = {
 
 export default () => {
   const [errors, setErrors] = useState(null);
-  let history = useHistory();
   return (
     <Layout>
       <ToastsContainer>
@@ -43,7 +42,7 @@ export default () => {
               .then(res => {
                 console.log(res);
                 if (res.status == 201) {
-                  history.push("/mypicks");
+                  nav("/mypicks");
                 }
               }).catch(err => {
                 console.log("error.res", err.response);
