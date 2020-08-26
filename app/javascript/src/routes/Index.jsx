@@ -3,8 +3,8 @@ import { Router, Route, Switch } from "react-router-dom";
 
 import history from "./history";
 import Landing from "../pages/Landing";
-import Login from '../components/forms/Login';
-import SignUp from '../components/forms/SignUp';
+import Login from '../pages/User/Login';
+import SignUp from '../pages/User/SignUp';
 import MyPicks from '../pages/MyPicks';
 
 export default (
