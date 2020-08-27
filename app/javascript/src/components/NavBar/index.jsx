@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
@@ -12,17 +13,17 @@ export default () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="collapseNav w-50 order-1 order-md-0">
           <Nav>
-            <Nav.Link href="/standings">Standings</Nav.Link>
-            <Nav.Link href="/mypicks">My Picks</Nav.Link>
-            <Nav.Link href="/epl_table">EPL Table</Nav.Link>
-            <Nav.Link href="/schedule">Schedule</Nav.Link>
+            <Link to="/standings" className="nav-link">Standings</Link>
+            <Link to="/mypicks" className="nav-link">My Picks</Link>
+            <Link to="/epl_table" className="nav-link">EPL Table</Link>
+            <Link to="/schedule" className="nav-link">Schedule</Link>
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse className="collapseNav w-50 order-2">
           <Nav className="ml-auto">
-            <Nav.Link href="/rules">Rules</Nav.Link>
-            <Nav.Link href="/account">Account</Nav.Link>
-            <Nav.Link onClick={async () => { await logout(); }}>Logout</Nav.Link>
+            <Link to="/rules" className="nav-link">Rules</Link>
+            <Link to="/account" className="nav-link">Account</Link>
+            <Nav.Link onClick={() => { logout(); }}>Logout</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
