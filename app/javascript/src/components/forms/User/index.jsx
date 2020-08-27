@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import { Formik, Form } from 'formik';
 
 import { FormContainer } from './styled';
@@ -10,7 +10,7 @@ import { ToastsContainer, ErrorDisplay } from '../elements/Toasts';
 const UserForm = ({ name, initialValues, validationSchema, submitFn, fields }) => {
   const [errors, setErrors] = useState(null);
   return (
-    <Layout>
+    <Fragment>
       <ToastsContainer>
         {errors && <ErrorDisplay errors={errors} />}
       </ToastsContainer>
@@ -33,7 +33,7 @@ const UserForm = ({ name, initialValues, validationSchema, submitFn, fields }) =
           )}
         </Formik>
       </FormContainer>
-    </Layout>
+    </Fragment>
   );
 };
 

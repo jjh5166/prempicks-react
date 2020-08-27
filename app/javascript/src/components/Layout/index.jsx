@@ -3,7 +3,7 @@ import React from "react";
 import NavBar from '../NavBar';
 import { PageContainer, ContentContainer } from './styled';
 
-export default ({ children, hideNav = false }) => (
+const Layout = ({ children, hideNav = false }) => (
   <PageContainer>
     {!hideNav && <NavBar />}
     <ContentContainer>
@@ -11,3 +11,5 @@ export default ({ children, hideNav = false }) => (
     </ContentContainer>
   </PageContainer>
 );
+
+export default Layout;
