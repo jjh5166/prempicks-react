@@ -14,6 +14,13 @@ Rails.application.routes.draw do
                sessions: 'users/sessions',
                registrations: 'users/registrations'
              }
+
+  authenticate :user do
+    devise_scope :user do
+      get 'users/info', to: "users/registrations#user_info"
+    end
+  end
+
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
   end

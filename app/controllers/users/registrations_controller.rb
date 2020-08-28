@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
+  # clear_respond_to
   respond_to :json
-
+  
+  # before_action :authenticate_user!, :user_info
   def create
     build_resource(sign_up_params)
 
@@ -11,6 +13,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     render_resource(resource)
   end
   
+  def user_info
+    render json: current_user.as_json(only: [:fname, :lname, :team_name, :email]), status: 200
+  end
+
   private
 
     def sign_up_params
