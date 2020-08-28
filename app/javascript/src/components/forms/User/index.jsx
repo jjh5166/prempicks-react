@@ -17,6 +17,7 @@ const UserForm = ({ name, initialValues, validationSchema, submitFn, fields }) =
       <FormContainer>
         <h2>{name}</h2>
         <Formik
+          enableReinitialize
           initialValues={initialValues}
           validationSchema={validationSchema}
           onSubmit={(data, { setSubmitting }) => {
