@@ -11,12 +11,12 @@ export const initialValues = {
 export const loginFields = [
   {
     name: 'email',
-    placeholder: 'Email',
+    labelName: 'Email',
     isPassword: false
   },
   {
     name: 'password',
-    placeholder: 'Password',
+    labelName: 'Password',
     isPassword: true
   }
 ];

@@ -19,7 +19,7 @@ export default ({ fields }) => {
             <TxtField
               key={field.name}
               name={field.name}
-              placeholder={field.placeholder}
+              labelName={field.labelName}
               isPassword={field.isPassword}
             />
           );
