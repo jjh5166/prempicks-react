@@ -5,7 +5,7 @@ import UserForm from '../../../components/forms/User';
 import Layout from '../../../components/Layout';
 import { getAccessToken } from '../../../accessToken';
 import nav from '../../../routes/nav';
-import { updateFields, UpdateFn } from './formConfig';
+import { updateFields, UpdateFn, initialValues } from './formConfig';
 import { validationSchema } from './validate';
 function setInitialValues(data) {
   return {
@@ -17,7 +17,7 @@ function setInitialValues(data) {
 }
 export default () => {
   const auth = getAccessToken();
-  const [userInfo, setUserInfo] = useState();
+  const [userInfo, setUserInfo] = useState(initialValues);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
