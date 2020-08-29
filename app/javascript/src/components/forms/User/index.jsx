@@ -2,7 +2,6 @@ import React, { useState, Fragment } from "react";
 import { Formik, Form } from 'formik';
 
 import { FormContainer } from './styled';
-import Layout from '../../Layout';
 import FormFields from '../elements/FormFields';
 import Bttn from '../elements/Bttn';
 import { ToastsContainer, ErrorDisplay } from '../elements/Toasts';

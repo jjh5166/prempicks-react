@@ -16,32 +16,32 @@ export const initialValues = {
 export const signupFields = [
   {
     name: 'fname',
-    placeholder: 'First Name',
+    labelName: 'First Name',
     isPassword: false
   },
   {
     name: 'lname',
-    placeholder: 'Last Name',
+    labelName: 'Last Name',
     isPassword: false
   },
   {
     name: 'team_name',
-    placeholder: 'Team Name',
+    labelName: 'Team Name',
     isPassword: false
   },
   {
     name: 'email',
-    placeholder: 'Email',
+    labelName: 'Email',
     isPassword: false
   },
   {
     name: 'password',
-    placeholder: 'Password',
+    labelName: 'Password',
     isPassword: true
   },
   {
     name: 'password_confirmation',
-    placeholder: 'Password',
+    labelName: 'Password',
     isPassword: true
   }
 ];

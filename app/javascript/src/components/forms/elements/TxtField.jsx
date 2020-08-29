@@ -2,7 +2,7 @@ import React from "react";
 import { useField } from 'formik';
 import { TextField } from '@material-ui/core';
 
-export default ({ placeholder, isPassword = false, ...props }) => {
+export default ({ labelName = '', isPassword = false, ...props }) => {
   const [field, meta] = useField(props);
   const errorText = meta.error && meta.touched ? meta.error : '';
   const password = isPassword ? "password" : "";
@@ -12,7 +12,10 @@ export default ({ placeholder, isPassword = false, ...props }) => {
       {...field}
       helperText={errorText}
       error={!!errorText}
-      placeholder={placeholder}
+      label={labelName}
+      InputLabelProps={
+        { shrink: true }
+      }
       type={password}
     />
   );
