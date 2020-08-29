@@ -3,6 +3,15 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+
+  put '/account/update', to: "account#update"
+
+  authenticate :user do
+    devise_scope :user do
+      get 'users/info', to: "users/registrations#user_info"
+    end
+  end
+
   devise_for :users,
              path: '',
              path_names: {
@@ -15,11 +24,7 @@ Rails.application.routes.draw do
                registrations: 'users/registrations'
              }
 
-  authenticate :user do
-    devise_scope :user do
-      get 'users/info', to: "users/registrations#user_info"
-    end
-  end
+
 
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
